@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "Zarni", email = "92203959+3roku0@users.noreply.github.com" }
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "numpy>=1.26",
     "scipy>=1.13",
@@ -43,7 +43,7 @@ url = "https://download.pytorch.org/whl/cpu"
 explicit = true
 
 [tool.ruff]
-target-version = "py310"
+target-version = "py311"
 line-length = 100
 
 [tool.ruff.lint]

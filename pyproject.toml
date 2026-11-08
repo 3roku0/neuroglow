@@ -4,7 +4,7 @@ version = "0.0.1"
 description = "Live training visualizer for PyTorch"
 readme = "README.md"
 authors = [
-    { name = "Zarni", email = "zarnihtetkhaing2020@gmail.com" }
+    { name = "Zarni", email = "92203959+3roku0@users.noreply.github.com" }
 ]
 requires-python = ">=3.10"
 dependencies = [
@@ -19,7 +19,7 @@ dependencies = [
 [dependency-groups]
 dev = [
     "pytest>=8.0",
-    "ruff>=0.4",
+    "ruff==0.17.4",
     "pyright>=1.1",
     "pre-commit>=3.7",
 ]

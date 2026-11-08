@@ -1,0 +1,3 @@
+"""Live training visualizer for PyTorch."""
+
+__version__ = "0.0.1"

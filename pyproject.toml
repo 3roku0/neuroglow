@@ -1,0 +1,53 @@
+[project]
+name = "neuroglow"
+version = "0.0.1"
+description = "Live training visualizer for PyTorch"
+readme = "README.md"
+authors = [
+    { name = "Zarni", email = "zarnihtetkhaing2020@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "fastapi>=0.111",
+    "uvicorn[standard]>=0.29",
+    "msgpack>=1.0",
+    "torch>=2.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+    "pyright>=1.1",
+    "pre-commit>=3.7",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/neuroglow"]
+artifacts = ["src/neuroglow/static/**"]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu", marker = "sys_platform == 'linux'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

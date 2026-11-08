@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# neuroglow project
+node_modules/
+frontend/dist/
+.DS_Store
+runs/
+
+# Built static assets bundled into the wheel (keep .gitkeep)
+src/neuroglow/static/*
+!src/neuroglow/static/.gitkeep
